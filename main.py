@@ -3,8 +3,6 @@ import os
 import numpy as np
 
 #local
-import DirSelectWidget
-import StateAll
 import FileCreater
 
 

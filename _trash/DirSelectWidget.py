@@ -5,7 +5,7 @@ from tkinter import messagebox
 from tkinter import filedialog
 
 #local
-import StateAll
+
 
 class DirSelectWidget():
     def __init__(self):
