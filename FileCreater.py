@@ -19,6 +19,7 @@ def openExplorer(path):
 
 def getDirPath():
     return easygui.diropenbox(title="変換するフォルダを選択")
+# def forDemoRmOutputDir():
 
 def fileCreater(dirPath):
     dirPath=getDirPath()
@@ -46,7 +47,8 @@ def fileCreater(dirPath):
             with open(filenamePath, 'r') as fr:
                 dp.setFileRawData(fr)
                 # dp.startUnitChangeForCalcProgram()
-                dp.startCalcIonSatCurrent()
+                # dp.startCalcIonSatCurrent()
+                dp.calcFloatVolt()
                 # dp.showGraph()
 
             with open(outputdirPath+"\\"+initialIndex+fileNameText,"w") as fw:
@@ -54,7 +56,7 @@ def fileCreater(dirPath):
                 arry=dp.getOutputData()
                 fw.write(arry)
         i+=1
-    dp.showAllGraph()
+    # dp.showAllGraph()
     
     if(i==0):
         root = tk.Tk()
@@ -63,7 +65,8 @@ def fileCreater(dirPath):
         messagebox.showerror("選択エラー", "変換可能なテキストファイルがありません。")
     else:
         #完了
-        openExplorer(outputdirPath)
+        # openExplorer(outputdirPath)
+        pass
 
     
 
